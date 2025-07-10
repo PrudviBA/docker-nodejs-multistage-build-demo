@@ -41,7 +41,7 @@ sudo systemctl start docker
 sudo systemctl enable docker
 docker --version
 ```
-#### ✅ (Optional) Run Docker Without `sudo`
+#### ✅ Enable Docker Without `sudo`
 To avoid using `sudo` with every Docker command, add your user to the Docker group:
 ```bash
 sudo usermod -aG docker $USER

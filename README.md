@@ -99,9 +99,45 @@ You should see : Hello from  Docker Multi-stage build!
 ### 🔹 5. Build & Run Multi-Stage Optimized Image
 #### 🏗️ Build Optimized Image
 
+```bash
+docker build -t myapp-optimized .
+```
+### ▶️ Run Optimized Container
+
+```bash
+docker run -d -p 3001:3000 myapp-optimized
+```
+
+This maps EC2 port 3001 to the container’s port 3000.
 
 
+### 📦 Optimized Image Size
+```bash
+docker images
+```
+
+<img width="1881" height="299" alt="Screenshot 2025-07-09 223130" src="https://github.com/user-attachments/assets/0e794953-d210-496f-ad4b-d8c3a1523df2" />
 
 
+### 📊 Image Size Comparison
+
+| Build Type         | Image Name        | Size     |
+|--------------------|-------------------|----------|
+| Basic Docker Build | `myapp-basic`     | ~1.09 GB |
+| Multi-Stage Build  | `myapp-optimized` | ~192 MB  |
+
+> 🧠 Multi-stage builds help reduce image size drastically by removing build-time dependencies.
+
+ ---
+
+### 💡 Key Learnings
+
+- How to use Docker to containerize a Node.js app
+- Difference between a regular Docker build and a multi-stage build
+- How multi-stage builds reduce final image size and improve security
+- How to expose containers using ports and access them from EC2
+
+
+---
 
   

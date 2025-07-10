@@ -69,6 +69,37 @@ docker build -t myapp-basic .
 After building the image, run the container using the following command :
 ```bash
 docker run -d -p 3000:3000 myapp-basic
+```
+- This maps container port 3000 to EC2's port 3000
+- You should see output like a container ID
+  
+### 📦 Image Size
+```bash
+docker images
+```
+
+<img width="1671" height="233" alt="Screenshot 2025-07-09 221710" src="https://github.com/user-attachments/assets/c2d61821-f288-4f45-ae74-bf58625b95cf" />
+
+
+🌐 Access in Browser  
+
+Visit the app in your browser :
+
+```bash
+http://<your-ec2-public-ip>:3000
+```
+
+You should see : Hello from  Docker Multi-stage build!
+
+✅ Make sure port 3000 is open in the EC2 security group.
+
+
+<img width="1908" height="882" alt="Screenshot 2025-07-09 221311" src="https://github.com/user-attachments/assets/fb85d9a5-4a91-4358-9fc5-5c17bbd2a01b" />
+
+### 🔹 5. Build & Run Multi-Stage Optimized Image
+#### 🏗️ Build Optimized Image
+
+
 
 
 
